@@ -1,0 +1,809 @@
+if _G.key == game.Players.LocalPlayer.UserId then
+
+local G2L = {};
+
+-- StarterGui.cala
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[cala]];
+
+-- StarterGui.cala.interface
+G2L["2"] = Instance.new("TextLabel", G2L["1"]);
+G2L["2"]["TextWrapped"] = true;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["TextScaled"] = true;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["2"]["TextTransparency"] = 0.25;
+G2L["2"]["TextSize"] = 14;
+G2L["2"]["TextColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["2"]["Size"] = UDim2.new(0, 343, 0, 17);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Text"] = [[open interface by typing "/e calamari" in chat]];
+G2L["2"]["Name"] = [[interface]];
+G2L["2"]["Visible"] = false;
+G2L["2"]["BackgroundTransparency"] = 1;
+G2L["2"]["Position"] = UDim2.new(0.81803959608078, 0, 0.964483916759491, 0);
+
+-- StarterGui.cala.Open-Close
+G2L["3"] = Instance.new("LocalScript", G2L["1"]);
+G2L["3"]["Name"] = [[Open-Close]];
+
+-- StarterGui.cala.calamari2023
+G2L["4"] = Instance.new("Frame", G2L["1"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(48, 49, 50);
+G2L["4"]["Size"] = UDim2.new(0, 396, 0, 309);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Position"] = UDim2.new(0.39676743745803833, 0, 0.3405954837799072, 0);
+G2L["4"]["Name"] = [[calamari2023]];
+
+-- StarterGui.cala.calamari2023.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.head
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["Size"] = UDim2.new(1, 0, -0.007575757801532745, 20);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[head]];
+
+-- StarterGui.cala.calamari2023.head.UICornerOverlayE
+G2L["7"] = Instance.new("Frame", G2L["6"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(42, 43, 44);
+G2L["7"]["Size"] = UDim2.new(1, 0, 0.10999999940395355, 0);
+G2L["7"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["7"]["Name"] = [[UICornerOverlayE]];
+
+-- StarterGui.cala.calamari2023.head.UIGradient
+G2L["8"] = Instance.new("UIGradient", G2L["6"]);
+G2L["8"]["Rotation"] = 90;
+G2L["8"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(72, 73, 74)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(52, 53, 54))};
+
+-- StarterGui.cala.calamari2023.head.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["6"]);
+G2L["9"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.head.TextLabel
+G2L["a"] = Instance.new("TextLabel", G2L["6"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextSize"] = 13;
+G2L["a"]["TextColor3"] = Color3.fromRGB(168, 168, 169);
+G2L["a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[Calamari]];
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Position"] = UDim2.new(0, 0, -1.1175870895385742e-08, 0);
+
+-- StarterGui.cala.calamari2023.head.TextLabel.UIPadding
+G2L["b"] = Instance.new("UIPadding", G2L["a"]);
+G2L["b"]["PaddingBottom"] = UDim.new(0, -2);
+
+-- StarterGui.cala.calamari2023.head.TextLabel.TextButton
+G2L["c"] = Instance.new("TextButton", G2L["a"]);
+G2L["c"]["ZIndex"] = 4;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextTransparency"] = 1;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Size"] = UDim2.new(0.25, 0, 1.2543352842330933, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Position"] = UDim2.new(0.3737373650074005, 0, -0.1871671825647354, 0);
+G2L["c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.head.TextLabel.TextButton.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+-- StarterGui.cala.calamari2023.head.close
+G2L["e"] = Instance.new("Frame", G2L["6"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(98, 98, 98);
+G2L["e"]["BackgroundTransparency"] = 0.5;
+G2L["e"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Position"] = UDim2.new(0.02199999988079071, 0, 0.2199999988079071, 0);
+G2L["e"]["Name"] = [[close]];
+
+-- StarterGui.cala.calamari2023.head.close.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0, 50);
+
+-- StarterGui.cala.calamari2023.head.close.TextButton
+G2L["10"] = Instance.new("TextButton", G2L["e"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextTransparency"] = 1;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.head.close.TextButton.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+
+
+-- StarterGui.cala.calamari2023.head.close.UIPadding
+G2L["12"] = Instance.new("UIPadding", G2L["e"]);
+
+
+-- StarterGui.cala.calamari2023.head.hide
+G2L["13"] = Instance.new("Frame", G2L["6"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(98, 98, 98);
+G2L["13"]["BackgroundTransparency"] = 0.5;
+G2L["13"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Position"] = UDim2.new(0.06400000303983688, 0, 0.2199999988079071, 0);
+G2L["13"]["Visible"] = false;
+G2L["13"]["Name"] = [[hide]];
+
+-- StarterGui.cala.calamari2023.head.hide.UICorner
+G2L["14"] = Instance.new("UICorner", G2L["13"]);
+G2L["14"]["CornerRadius"] = UDim.new(0, 50);
+
+-- StarterGui.cala.calamari2023.head.hide.TextButton
+G2L["15"] = Instance.new("TextButton", G2L["13"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextTransparency"] = 1;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.head.hide.TextButton.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["15"]);
+
+
+-- StarterGui.cala.calamari2023.shadow
+G2L["17"] = Instance.new("Frame", G2L["4"]);
+G2L["17"]["ZIndex"] = 0;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["17"]["Name"] = [[shadow]];
+
+-- StarterGui.cala.calamari2023.shadow.main
+G2L["18"] = Instance.new("ImageLabel", G2L["17"]);
+G2L["18"]["ZIndex"] = 0;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+G2L["18"]["ScaleType"] = Enum.ScaleType.Slice;
+G2L["18"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["ImageTransparency"] = 0.699999988079071;
+G2L["18"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["18"]["Image"] = [[rbxassetid://6014261993]];
+G2L["18"]["Size"] = UDim2.new(1, 47, 1, 47);
+G2L["18"]["Name"] = [[main]];
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.cala.calamari2023.sign
+G2L["19"] = Instance.new("Frame", G2L["4"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(48, 49, 50);
+G2L["19"]["BackgroundTransparency"] = 0.9900000095367432;
+G2L["19"]["Size"] = UDim2.new(0, 183, 0, 269);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Position"] = UDim2.new(0.26767677068710327, 0, 0.09385122358798981, 0);
+G2L["19"]["Name"] = [[sign]];
+
+-- StarterGui.cala.calamari2023.sign.Logo
+G2L["1a"] = Instance.new("ImageLabel", G2L["19"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["Image"] = [[http://www.roblox.com/asset/?id=13871396752]];
+G2L["1a"]["Size"] = UDim2.new(0, 100, 0, 122);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[Logo]];
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Position"] = UDim2.new(0.22404371201992035, 0, -0.014498118311166763, 0);
+
+-- StarterGui.cala.calamari2023.sign.Logo.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
+
+
+-- StarterGui.cala.calamari2023.sign.Username
+G2L["1c"] = Instance.new("Frame", G2L["19"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(59, 60, 61);
+G2L["1c"]["Size"] = UDim2.new(1, 0, 0.08015241473913193, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Position"] = UDim2.new(0, 0, 0.3643122613430023, 0);
+G2L["1c"]["Name"] = [[Username]];
+
+-- StarterGui.cala.calamari2023.sign.Username.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
+G2L["1d"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.Username.Frame
+G2L["1e"] = Instance.new("Frame", G2L["1c"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(84, 85, 86);
+G2L["1e"]["Size"] = UDim2.new(0.990929126739502, 0, -0.007619265932589769, 2);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Position"] = UDim2.new(0.004999879747629166, 0, 0.9040003418922424, 0);
+
+-- StarterGui.cala.calamari2023.sign.Username.Frame.UICorner
+G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
+G2L["1f"]["CornerRadius"] = UDim.new(0, 50);
+
+-- StarterGui.cala.calamari2023.sign.Username.TextBox
+G2L["20"] = Instance.new("TextBox", G2L["1c"]);
+G2L["20"]["PlaceholderColor3"] = Color3.fromRGB(116, 116, 116);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextSize"] = 12;
+G2L["20"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["TextColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["PlaceholderText"] = [[Username...]];
+G2L["20"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Text"] = [[]];
+
+-- StarterGui.cala.calamari2023.sign.Username.TextBox.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+G2L["21"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.Username.TextBox.UIPadding
+G2L["22"] = Instance.new("UIPadding", G2L["20"]);
+G2L["22"]["PaddingBottom"] = UDim.new(0, -1);
+G2L["22"]["PaddingLeft"] = UDim.new(0, 13);
+
+-- StarterGui.cala.calamari2023.sign.Username.TextBox.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["20"]);
+
+
+-- StarterGui.cala.calamari2023.sign.Password
+G2L["24"] = Instance.new("Frame", G2L["19"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(59, 60, 61);
+G2L["24"]["Size"] = UDim2.new(1, 0, 0.08015241473913193, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Position"] = UDim2.new(0, 0, 0.47600001096725464, 0);
+G2L["24"]["Name"] = [[Password]];
+
+-- StarterGui.cala.calamari2023.sign.Password.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["24"]);
+G2L["25"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.Password.Frame
+G2L["26"] = Instance.new("Frame", G2L["24"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(84, 85, 86);
+G2L["26"]["Size"] = UDim2.new(0.9909289479255676, 0, -0.007619265932589769, 2);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Position"] = UDim2.new(0.004999879747629166, 0, 0.9040003418922424, 0);
+
+-- StarterGui.cala.calamari2023.sign.Password.Frame.UICorner
+G2L["27"] = Instance.new("UICorner", G2L["26"]);
+G2L["27"]["CornerRadius"] = UDim.new(0, 50);
+
+-- StarterGui.cala.calamari2023.sign.Password.TextBox
+G2L["28"] = Instance.new("TextBox", G2L["24"]);
+G2L["28"]["PlaceholderColor3"] = Color3.fromRGB(116, 116, 116);
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["TextSize"] = 12;
+G2L["28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["TextColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["28"]["BackgroundTransparency"] = 1;
+G2L["28"]["PlaceholderText"] = [[Password...]];
+G2L["28"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[]];
+
+-- StarterGui.cala.calamari2023.sign.Password.TextBox.UICorner
+G2L["29"] = Instance.new("UICorner", G2L["28"]);
+G2L["29"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.Password.TextBox.UIPadding
+G2L["2a"] = Instance.new("UIPadding", G2L["28"]);
+G2L["2a"]["PaddingBottom"] = UDim.new(0, -1);
+G2L["2a"]["PaddingLeft"] = UDim.new(0, 13);
+
+-- StarterGui.cala.calamari2023.sign.Password.TextBox.LocalScript
+G2L["2b"] = Instance.new("LocalScript", G2L["28"]);
+
+
+-- StarterGui.cala.calamari2023.sign.confirm
+G2L["2c"] = Instance.new("Frame", G2L["19"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(100, 101, 102);
+G2L["2c"]["Size"] = UDim2.new(1, 0, 0.08743494749069214, 0);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Position"] = UDim2.new(-0.004999879747629166, 0, 0.5809999108314514, 0);
+G2L["2c"]["Name"] = [[confirm]];
+
+-- StarterGui.cala.calamari2023.sign.confirm.TextLabel
+G2L["2d"] = Instance.new("TextLabel", G2L["2c"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["2d"]["TextSize"] = 13;
+G2L["2d"]["TextColor3"] = Color3.fromRGB(227, 227, 228);
+G2L["2d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[Login]];
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Position"] = UDim2.new(0, 0, -1.1175870895385742e-08, 0);
+
+-- StarterGui.cala.calamari2023.sign.confirm.TextLabel.UIPadding
+G2L["2e"] = Instance.new("UIPadding", G2L["2d"]);
+
+
+-- StarterGui.cala.calamari2023.sign.confirm.UICorner
+G2L["2f"] = Instance.new("UICorner", G2L["2c"]);
+G2L["2f"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.confirm.TextButton
+G2L["30"] = Instance.new("TextButton", G2L["2c"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextTransparency"] = 1;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextSize"] = 14;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.sign.confirm.TextButton.UICorner
+G2L["31"] = Instance.new("UICorner", G2L["30"]);
+G2L["31"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.sign.confirm.TextButton.LocalScript
+G2L["32"] = Instance.new("LocalScript", G2L["30"]);
+
+
+-- StarterGui.cala.calamari2023.sign.Forgot
+G2L["33"] = Instance.new("TextLabel", G2L["19"]);
+G2L["33"]["TextWrapped"] = true;
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextScaled"] = true;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["33"]["TextTransparency"] = 0.20000000298023224;
+G2L["33"]["TextSize"] = 14;
+G2L["33"]["TextColor3"] = Color3.fromRGB(168, 168, 169);
+G2L["33"]["Size"] = UDim2.new(0.5081969499588013, 0, 0.06486988067626953, 0);
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[Forgot Password]];
+G2L["33"]["Name"] = [[Forgot]];
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["Position"] = UDim2.new(0.24590197205543518, 0, 0.9107807278633118, 0);
+
+-- StarterGui.cala.calamari2023.sign.Forgot.TextButton
+G2L["34"] = Instance.new("TextButton", G2L["33"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextTransparency"] = 1;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["TextSize"] = 14;
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.sign.Forgot.TextButton.LocalScript
+G2L["35"] = Instance.new("LocalScript", G2L["34"]);
+
+
+-- StarterGui.cala.calamari2023.sign.c/w
+G2L["36"] = Instance.new("TextLabel", G2L["19"]);
+G2L["36"]["TextWrapped"] = true;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["TextScaled"] = true;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["36"]["TextTransparency"] = 1;
+G2L["36"]["TextSize"] = 14;
+G2L["36"]["TextColor3"] = Color3.fromRGB(147, 169, 150);
+G2L["36"]["Size"] = UDim2.new(0.5081968903541565, 0, 0.05743493512272835, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[Correct!]];
+G2L["36"]["Name"] = [[c/w]];
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Position"] = UDim2.new(0.24590197205543518, 0, 0.6914498209953308, 0);
+
+-- StarterGui.cala.calamari2023.sign.c/w.LocalScript
+G2L["37"] = Instance.new("LocalScript", G2L["36"]);
+
+
+-- StarterGui.cala.calamari2023.cursor
+G2L["38"] = Instance.new("LocalScript", G2L["4"]);
+G2L["38"]["Name"] = [[cursor]];
+
+-- StarterGui.cala.calamari2023.drag
+G2L["39"] = Instance.new("LocalScript", G2L["4"]);
+G2L["39"]["Name"] = [[drag]];
+
+-- StarterGui.cala.calamari2023.resetpass
+G2L["3a"] = Instance.new("Frame", G2L["4"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(48, 49, 50);
+G2L["3a"]["BackgroundTransparency"] = 0.9900000095367432;
+G2L["3a"]["Size"] = UDim2.new(0, 183, 0, 269);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Position"] = UDim2.new(0.26767677068710327, 0, 0.09385122358798981, 0);
+G2L["3a"]["Visible"] = false;
+G2L["3a"]["Name"] = [[resetpass]];
+
+-- StarterGui.cala.calamari2023.resetpass.Logo
+G2L["3b"] = Instance.new("ImageLabel", G2L["3a"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["Image"] = [[http://www.roblox.com/asset/?id=13871396752]];
+G2L["3b"]["Size"] = UDim2.new(0, 100, 0, 122);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Name"] = [[Logo]];
+G2L["3b"]["BackgroundTransparency"] = 1;
+G2L["3b"]["Position"] = UDim2.new(0.22404371201992035, 0, -0.014498118311166763, 0);
+
+-- StarterGui.cala.calamari2023.resetpass.Logo.UICorner
+G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
+
+
+-- StarterGui.cala.calamari2023.resetpass.email
+G2L["3d"] = Instance.new("Frame", G2L["3a"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(59, 60, 61);
+G2L["3d"]["Size"] = UDim2.new(1, 0, 0.08015241473913193, 0);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Position"] = UDim2.new(0, 0, 0.47600001096725464, 0);
+G2L["3d"]["Name"] = [[email]];
+
+-- StarterGui.cala.calamari2023.resetpass.email.UICorner
+G2L["3e"] = Instance.new("UICorner", G2L["3d"]);
+G2L["3e"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.resetpass.email.Frame
+G2L["3f"] = Instance.new("Frame", G2L["3d"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(84, 85, 86);
+G2L["3f"]["Size"] = UDim2.new(0.9799999594688416, 0, -0.007619265932589769, 2);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Position"] = UDim2.new(0.004999879747629166, 0, 0.9040003418922424, 0);
+
+-- StarterGui.cala.calamari2023.resetpass.email.Frame.UICorner
+G2L["40"] = Instance.new("UICorner", G2L["3f"]);
+G2L["40"]["CornerRadius"] = UDim.new(0, 50);
+
+-- StarterGui.cala.calamari2023.resetpass.email.TextBox
+G2L["41"] = Instance.new("TextBox", G2L["3d"]);
+G2L["41"]["PlaceholderColor3"] = Color3.fromRGB(116, 116, 116);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["TextSize"] = 12;
+G2L["41"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["TextColor3"] = Color3.fromRGB(201, 201, 201);
+G2L["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["PlaceholderText"] = [[Email...]];
+G2L["41"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Text"] = [[]];
+
+-- StarterGui.cala.calamari2023.resetpass.email.TextBox.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
+G2L["42"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.resetpass.email.TextBox.UIPadding
+G2L["43"] = Instance.new("UIPadding", G2L["41"]);
+G2L["43"]["PaddingBottom"] = UDim.new(0, -1);
+G2L["43"]["PaddingLeft"] = UDim.new(0, 13);
+
+-- StarterGui.cala.calamari2023.resetpass.confirm
+G2L["44"] = Instance.new("Frame", G2L["3a"]);
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(100, 101, 102);
+G2L["44"]["Size"] = UDim2.new(1, 0, 0.08743494749069214, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Position"] = UDim2.new(-0.004999879747629166, 0, 0.5809999108314514, 0);
+G2L["44"]["Name"] = [[confirm]];
+
+-- StarterGui.cala.calamari2023.resetpass.confirm.UICorner
+G2L["45"] = Instance.new("UICorner", G2L["44"]);
+G2L["45"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.cala.calamari2023.resetpass.confirm.TextLabel
+G2L["46"] = Instance.new("TextLabel", G2L["44"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+G2L["46"]["TextSize"] = 13;
+G2L["46"]["TextColor3"] = Color3.fromRGB(227, 227, 228);
+G2L["46"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[Reset]];
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["Position"] = UDim2.new(0, 0, -1.1175870895385742e-08, 0);
+
+-- StarterGui.cala.calamari2023.resetpass.confirm.TextLabel.UIPadding
+G2L["47"] = Instance.new("UIPadding", G2L["46"]);
+
+
+-- StarterGui.cala.calamari2023.resetpass.Back
+G2L["48"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["48"]["TextWrapped"] = true;
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["TextScaled"] = true;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["48"]["TextTransparency"] = 0.20000000298023224;
+G2L["48"]["TextSize"] = 14;
+G2L["48"]["TextColor3"] = Color3.fromRGB(168, 168, 169);
+G2L["48"]["Size"] = UDim2.new(0.5081969499588013, 0, 0.04628252983093262, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[Go Back]];
+G2L["48"]["Name"] = [[Back]];
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Position"] = UDim2.new(0.24590197205543518, 0, 0.9293681383132935, 0);
+
+-- StarterGui.cala.calamari2023.resetpass.Back.TextButton
+G2L["49"] = Instance.new("TextButton", G2L["48"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextTransparency"] = 1;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.cala.calamari2023.resetpass.Back.TextButton.LocalScript
+G2L["4a"] = Instance.new("LocalScript", G2L["49"]);
+
+
+-- StarterGui.cala.calamari2023.executor
+G2L["4b"] = Instance.new("TextLabel", G2L["4"]);
+G2L["4b"]["TextWrapped"] = true;
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["TextScaled"] = true;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4b"]["TextTransparency"] = 0.46000000834465027;
+G2L["4b"]["TextSize"] = 14;
+G2L["4b"]["TextColor3"] = Color3.fromRGB(168, 168, 169);
+G2L["4b"]["Size"] = UDim2.new(0.2582052946090698, 0, 0.038979921489953995, 0);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Text"] = [[]];
+G2L["4b"]["Name"] = [[executor]];
+G2L["4b"]["BackgroundTransparency"] = 1;
+G2L["4b"]["Position"] = UDim2.new(0.7282254099845886, 0, 0.9237256050109863, 0);
+
+-- StarterGui.cala.calamari2023.executor.UITextSizeConstraint
+G2L["4c"] = Instance.new("UITextSizeConstraint", G2L["4b"]);
+G2L["4c"]["MaxTextSize"] = 12;
+
+-- StarterGui.cala.calamari2023.executor.LocalScript
+G2L["4d"] = Instance.new("LocalScript", G2L["4b"]);
+
+
+-- StarterGui.cala.Open-Close
+local function C_3()
+local script = G2L["3"];
+	local function onChat(message)
+		if string.lower(message) == "/e calamari" or string.lower(message) == "/calamari" then
+			if script.Parent.calamari2023 then
+				script.Parent.calamari2023.Visible = true
+				script.Parent.interface.Visible = false
+			else
+				script.Parent:WaitForChild("calmarimain").Visible = true
+				script.Parent.interface.Visible = false
+			end
+		end
+	end
+	
+	game.Players.LocalPlayer.Chatted:Connect(onChat)
+end;
+task.spawn(C_3);
+-- StarterGui.cala.calamari2023.head.TextLabel.TextButton.LocalScript
+local function C_d()
+local script = G2L["d"];
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.Parent.TextColor3 = Color3.fromRGB(227, 227, 228)
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		script.Parent.Parent.TextColor3 = Color3.fromRGB(167, 167, 168)
+	end)
+	script.Parent.MouseButton1Click:Connect(function()
+		if 	script.Parent.Parent.Text == "octopus gaming" then
+			script.Parent.Parent.Text = "Calamari"
+			script.Parent.Parent.Parent.Parent.sign.Logo.Image = "rbxassetid://13871396752"
+		else
+			script.Parent.Parent.Text = "octopus gaming"
+		end
+	end)
+end;
+task.spawn(C_d);
+-- StarterGui.cala.calamari2023.head.close.TextButton.LocalScript
+local function C_11()
+local script = G2L["11"];
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.Parent.BackgroundTransparency = 0 
+	end)
+	script.Parent.MouseLeave:Connect(function()
+	     script.Parent.Parent.BackgroundTransparency = 0.5 
+	end)
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.Parent.Parent.Parent.calamari2023.Visible = false script.Parent.Parent.Parent.Parent.Parent.interface.Visible = true 
+	end)
+	
+	-- enter | 244, 55, 60
+	-- leave | 97,97,97
+end;
+task.spawn(C_11);
+-- StarterGui.cala.calamari2023.head.hide.TextButton.LocalScript
+local function C_16()
+local script = G2L["16"];
+	script.Parent.MouseEnter:Connect(function() script.Parent.Parent.BackgroundColor3 = Color3.fromRGB(204,160,34) script.Parent.Parent.BackgroundTransparency = 0 end)
+	script.Parent.MouseLeave:Connect(function() script.Parent.Parent.BackgroundColor3 = Color3.fromRGB(97,97,97) script.Parent.Parent.BackgroundTransparency = 0.5 end) -- 234,190,64
+	script.Parent.MouseButton1Click:Connect(function() script.Parent.Parent.Parent.Parent.Parent.calamari2023.Visible = false end)
+end;
+task.spawn(C_16);
+-- StarterGui.cala.calamari2023.sign.Username.TextBox.LocalScript
+local function C_23()
+local script = G2L["23"];
+	script.Parent.Focused:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Frame, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(162, 166, 167)}):Play() --139, 142, 143
+		game:GetService("TweenService"):Create(script.Parent.Parent.TextBox, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {PlaceholderColor3 = Color3.fromRGB(162, 166, 167)}):Play()
+		script.Parent.Parent.TextBox.PlaceholderText = "Ex. Calamari"
+	end)
+	script.Parent.FocusLost:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Frame, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(83, 84, 85)}):Play() --83, 84, 85
+		game:GetService("TweenService"):Create(script.Parent.Parent.TextBox, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {PlaceholderColor3 = Color3.fromRGB(115, 115, 115)}):Play()
+		script.Parent.Parent.TextBox.PlaceholderText = "Username..."
+	end)
+end;
+task.spawn(C_23);
+-- StarterGui.cala.calamari2023.sign.Password.TextBox.LocalScript
+local function C_2b()
+local script = G2L["2b"];
+	script.Parent.Focused:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Frame, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(162, 166, 167)}):Play() --139, 142, 143
+		game:GetService("TweenService"):Create(script.Parent.Parent.TextBox, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {PlaceholderColor3 = Color3.fromRGB(162, 166, 167)}):Play()
+		script.Parent.Parent.TextBox.PlaceholderText = "Ex. SecretPassword123"
+	end)
+	script.Parent.FocusLost:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Frame, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(83, 84, 85)}):Play() --83, 84, 85
+		game:GetService("TweenService"):Create(script.Parent.Parent.TextBox, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {PlaceholderColor3 = Color3.fromRGB(115, 115, 115)}):Play()
+		script.Parent.Parent.TextBox.PlaceholderText = "Password..."
+	end)
+end;
+task.spawn(C_2b);
+-- StarterGui.cala.calamari2023.sign.confirm.TextButton.LocalScript
+local function C_32()
+local script = G2L["32"];
+	local tween = game:GetService("TweenService")
+	
+	script.Parent.MouseEnter:Connect(function()
+		local Tween1 = tween:Create(script.Parent.Parent, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(83, 84, 85)})
+		Tween1:Play()
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		local Tween2 = tween:Create(script.Parent.Parent, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(99,100,101)})
+		Tween2:Play()
+	end)
+	script.Parent.MouseButton1Down:Connect(function()
+		local Tween1 = tween:Create(script.Parent.Parent, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(64, 65, 66)})
+		Tween1:Play()
+	end)
+	script.Parent.MouseButton1Up:Connect(function()
+		local Tween2 = tween:Create(script.Parent.Parent, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(99,100,101)})
+		Tween2:Play()
+		if script.Parent.Parent.Parent.Username.TextBox.Text == "notscripter" or script.Parent.Parent.Parent.Username.TextBox.Text == "aboba" then
+			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
+			script.Parent.Parent.Parent["c/w"].Text = "Correct!"
+			script.Parent.Parent.Parent["c/w"].TextColor3 = Color3.fromRGB(146, 168, 149)
+			game:GetService("TweenService"):Create(script.Parent.Parent.Parent["c/w"], TweenInfo.new(0.75, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
+			wait(3)
+			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
+		else
+			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
+			script.Parent.Parent.Parent["c/w"].Text = "Wrong!"
+			script.Parent.Parent.Parent["c/w"].TextColor3 = Color3.fromRGB(255, 19, 62)
+			game:GetService("TweenService"):Create(script.Parent.Parent.Parent["c/w"], TweenInfo.new(0.75, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
+			wait(3)
+			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
+		end
+	end)
+end;
+task.spawn(C_32);
+-- StarterGui.cala.calamari2023.sign.Forgot.TextButton.LocalScript
+local function C_35()
+local script = G2L["35"];
+	script.Parent.MouseEnter:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(235,235,235) end) script.Parent.MouseLeave:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(200,200,200) end) script.Parent.MouseButton1Click:Connect(function() script.Parent.Parent.Parent.Parent.resetpass.Visible = true script.Parent.Parent.Parent.Parent.sign.Visible = false end)
+end;
+task.spawn(C_35);
+-- StarterGui.cala.calamari2023.sign.c/w.LocalScript
+local function C_37()
+local script = G2L["37"];
+	if script.Parent.Parent.Username.TextBox.Text == "notscripter" and script.Parent.Parent.Password.TextBox.Text == "real" then
+		game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
+	end
+end;
+task.spawn(C_37);
+-- StarterGui.cala.calamari2023.cursor
+local function C_38()
+local script = G2L["38"];
+	script.Parent.MouseEnter:Connect(function() game.Players.LocalPlayer:GetMouse().Icon = "rbxassetid://7087918593"  end)
+	script.Parent.MouseLeave:Connect(function() game.Players.LocalPlayer:GetMouse().Icon = "" end)
+	--script.Parent.Active = true
+	--script.Parent.Draggable = true
+end;
+task.spawn(C_38);
+-- StarterGui.cala.calamari2023.drag
+local function C_39()
+local script = G2L["39"];
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end;
+task.spawn(C_39);
+-- StarterGui.cala.calamari2023.resetpass.Back.TextButton.LocalScript
+local function C_4a()
+local script = G2L["4a"];
+	script.Parent.MouseEnter:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(235,235,235) end) script.Parent.MouseLeave:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(200,200,200) end) script.Parent.MouseButton1Click:Connect(function() script.Parent.Parent.Parent.Parent.sign.Visible = true script.Parent.Parent.Parent.Parent.resetpass.Visible = false end)
+end;
+task.spawn(C_4a);
+-- StarterGui.cala.calamari2023.executor.LocalScript
+local function C_4d()
+local script = G2L["4d"];
+	script.Parent.Text = string.lower(identifyexecutor())
+end;
+task.spawn(C_4d);
+
+return G2L["1"], require;
+end
