@@ -1,5 +1,15 @@
 if _G.key == game.Players.LocalPlayer.UserId then
 
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 77 | Scripts: 12 | Modules: 0
 local G2L = {};
 
 -- StarterGui.cala
@@ -424,9 +434,22 @@ G2L["36"]["Name"] = [[c/w]];
 G2L["36"]["BackgroundTransparency"] = 1;
 G2L["36"]["Position"] = UDim2.new(0.24590197205543518, 0, 0.6914498209953308, 0);
 
--- StarterGui.cala.calamari2023.sign.c/w.LocalScript
-G2L["37"] = Instance.new("LocalScript", G2L["36"]);
-
+-- StarterGui.cala.calamari2023.sign.c/w.beta
+G2L["37"] = Instance.new("TextLabel", G2L["36"]);
+G2L["37"]["TextWrapped"] = true;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["TextScaled"] = true;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["TextTransparency"] = 1;
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["TextColor3"] = Color3.fromRGB(169, 156, 147);
+G2L["37"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Text"] = [[beta]];
+G2L["37"]["Name"] = [[beta]];
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Position"] = UDim2.new(-0.0014097727835178375, 0, 0.9503495097160339, 0);
 
 -- StarterGui.cala.calamari2023.cursor
 G2L["38"] = Instance.new("LocalScript", G2L["4"]);
@@ -712,13 +735,16 @@ local script = G2L["32"];
 	script.Parent.MouseButton1Up:Connect(function()
 		local Tween2 = tween:Create(script.Parent.Parent, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(99,100,101)})
 		Tween2:Play()
-		if script.Parent.Parent.Parent.Username.TextBox.Text == "notscripter" or script.Parent.Parent.Parent.Username.TextBox.Text == "aboba" then
+		if script.Parent.Parent.Parent.Username.TextBox.Text == "notscripter" then
 			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
 			script.Parent.Parent.Parent["c/w"].Text = "Correct!"
 			script.Parent.Parent.Parent["c/w"].TextColor3 = Color3.fromRGB(146, 168, 149)
 			game:GetService("TweenService"):Create(script.Parent.Parent.Parent["c/w"], TweenInfo.new(0.75, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
+			wait(0.6)
+			game:GetService("TweenService"):Create(script.Parent.Parent.Parent["c/w"].beta, TweenInfo.new(0.75, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
 			wait(3)
 			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
+			script.Parent.Parent.Parent["c/w"].beta.TextTransparency = 1
 		else
 			script.Parent.Parent.Parent["c/w"].TextTransparency = 1
 			script.Parent.Parent.Parent["c/w"].Text = "Wrong!"
@@ -736,14 +762,6 @@ local script = G2L["35"];
 	script.Parent.MouseEnter:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(235,235,235) end) script.Parent.MouseLeave:Connect(function() script.Parent.Parent.TextColor3 = Color3.fromRGB(200,200,200) end) script.Parent.MouseButton1Click:Connect(function() script.Parent.Parent.Parent.Parent.resetpass.Visible = true script.Parent.Parent.Parent.Parent.sign.Visible = false end)
 end;
 task.spawn(C_35);
--- StarterGui.cala.calamari2023.sign.c/w.LocalScript
-local function C_37()
-local script = G2L["37"];
-	if script.Parent.Parent.Username.TextBox.Text == "notscripter" and script.Parent.Parent.Password.TextBox.Text == "real" then
-		game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.55, Enum.EasingStyle.Quint), {TextTransparency = 0.2}):Play()
-	end
-end;
-task.spawn(C_37);
 -- StarterGui.cala.calamari2023.cursor
 local function C_38()
 local script = G2L["38"];
